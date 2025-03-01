@@ -1,0 +1,108 @@
+.container{
+    background-color: #1A1A1A;
+    max-width: 475px;
+    height: 584px;
+    border-radius: 24px;
+    padding: 64px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.LoginContainer{
+    display: flex;
+    justify-content: center;
+    gap: 112px;
+}
+
+.Login{
+    max-width: 1034px;
+    margin: auto;
+    padding-top: 220px;
+}
+
+.cardTitle{
+    font-size: 32px;
+    color: #FFFFFF;
+}
+
+.cardDescription{
+    color: #8F93A3;
+    font-size: 16px;
+    max-width: 263px;
+    height: 48px;
+    margin: auto;
+    text-align: center;
+}
+
+.forgetpassword{
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.btn1{
+    background-color: #FF5F5F;
+    width: 343px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+.switch{
+    color: #8F93A3;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.span1{
+    color: #FF5F5F;
+}
+
+.groupInput{
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+@media (max-width: 1000px){
+    .loginPhoto{
+        width: 100%;
+    }
+
+    .LoginContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 480px){
+   .container{
+    max-width: 100%;
+    width: 100%;
+   }
+
+   .btn1{
+    width: 100%;
+   }
+
+   .cardTitle{
+    text-align: center;
+   }
+}

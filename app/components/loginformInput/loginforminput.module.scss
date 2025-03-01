@@ -1,0 +1,32 @@
+.text{
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.loginFormInput{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input .input1{
+    width: 343px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 12px 16px;
+    background-color: #2D2D2D;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+
+@media (max-width: 480px){
+    .container{
+     max-width: 100%;
+     width: 100%;
+    }
+    .input .input1{
+        width: 100%;
+    }
+ }
