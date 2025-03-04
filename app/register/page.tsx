@@ -1,14 +1,14 @@
 "use client"
-import { ST } from 'next/dist/shared/lib/utils';
-import LoginFormInput from '../components/loginformInput/loginforminput';
 import styles from './page.module.scss'
 import Image from "next/image";
 import { useState } from 'react';
 import axios from 'axios';
 import { Button, message, Space } from 'antd';
-export default function Login() {
+import LoginFormInput from '../components/loginformInput/loginforminput';
+export default function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [name, setName] = useState("")
     const [messageApi, contextHolder] = message.useMessage();
 
     const change1 = (e:React.ChangeEvent<HTMLInputElement>) => {
@@ -19,10 +19,16 @@ export default function Login() {
         setPassword(e.target.value)
     }
 
+
+    const change3 = (e:React.ChangeEvent<HTMLInputElement>) => {
+        setName(e.target.value)
+    }
+
     const handleSubmit = async () => {
         console.log(email);
         
-        axios.post("http://localhost:3001/auth/login",{
+        axios.post("http://localhost:3001/register",{
+            name:name,
             email:email,
             password:password
         })
@@ -40,10 +46,10 @@ export default function Login() {
               });
         })
     }
-    return (
+    return(
         <>
-            {contextHolder}
-            <div className={styles.Login}>
+              {contextHolder}
+        <div className={styles.Login}>
                 <div className={styles.LoginContainer}>
                     <Image
                         src="/images/loginimg.png"
@@ -60,6 +66,12 @@ export default function Login() {
                                     to register</p>
                             </div>
                             <div className={styles.groupInput}>
+                            <LoginFormInput
+                                    title={"Name"}
+                                    placeholder={"Enter Name"}
+                                    type={"text"}
+                                    change1={change3}
+                                />
                                 <LoginFormInput
                                     title={"Email"}
                                     placeholder={"Enter Email"}
